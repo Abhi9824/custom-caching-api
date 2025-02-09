@@ -12,13 +12,13 @@ app.use(express.json());
 app.use(cors());
 connectDB();
 
-//Routes
-app.use(cacheRoutes);
-
 // Default route
 app.get("/", (req, res) => {
   res.send("Hello Cactro");
 });
+
+//Routes
+app.use(cacheRoutes);
 
 const PORT = process.env.PORT || 5000;
 
